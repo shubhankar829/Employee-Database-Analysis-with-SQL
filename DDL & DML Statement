@@ -1,0 +1,83 @@
+DDL and DML Statement
+
+-- Creating the EmployeeDetails table
+CREATE TABLE EmployeeDetails (
+    EmpId INT PRIMARY KEY,
+    FullName VARCHAR(50),
+    ManagerId INT,
+    DateOfJoining DATE,
+    City VARCHAR(50)
+);
+
+-- Inserting data into EmployeeDetails
+INSERT INTO EmployeeDetails (EmpId, FullName, ManagerId, DateOfJoining, City) VALUES
+(121, 'John Snow', 321, '2019-01-31', 'Toronto'),
+(321, 'Walter White', 986, '2020-01-30', 'California'),
+(421, 'Kuldeep Rana', 876, '2021-11-27', 'New Delhi');
+
+-- Adding 30 more rows to EmployeeDetails
+INSERT INTO EmployeeDetails (EmpId, FullName, ManagerId, DateOfJoining, City) VALUES
+(122, 'Emily Clark', 321, '2018-07-15', 'Chicago'),
+(123, 'Robert Brown', 876, '2019-05-20', 'Austin'),
+(124, 'Sophia Moore', 986, '2018-10-10', 'Seattle'),
+(125, 'David Miller', 876, '2019-03-18', 'Boston'),
+(126, 'Lisa Davis', 321, '2020-12-05', 'San Francisco'),
+(127, 'Chris Johnson', 986, '2021-02-14', 'Miami'),
+(128, 'Megan Lewis', 321, '2021-07-22', 'Houston'),
+(129, 'Luke Martinez', 876, '2021-09-08', 'Dallas'),
+(130, 'Amelia Taylor', 321, '2022-01-17', 'Phoenix'),
+-- Add more rows similarly
+(131, 'Nathan Clark', 321, '2021-04-30', 'San Diego'),
+(132, 'Olivia Walker', 986, '2021-06-19', 'Denver'),
+(133, 'Liam Young', 876, '2019-11-25', 'Las Vegas'),
+(134, 'Ava Allen', 321, '2020-03-14', 'Atlanta'),
+(135, 'Mason King', 986, '2021-10-11', 'Detroit'),
+(136, 'Evelyn Hall', 321, '2022-08-05', 'Orlando'),
+(137, 'James Scott', 876, '2020-04-24', 'Baltimore'),
+(138, 'Ella Adams', 321, '2019-07-30', 'Cincinnati'),
+(139, 'Benjamin Baker', 876, '2020-05-16', 'Columbus'),
+(140, 'Henry Mitchell', 321, '2021-08-29', 'Charlotte');
+
+-- Creating the EmployeeSalary table
+CREATE TABLE EmployeeSalary (
+    EmpId INT,
+    Project VARCHAR(10),
+    Salary DECIMAL(10, 2),
+    Variable DECIMAL(10, 2),
+    FOREIGN KEY (EmpId) REFERENCES EmployeeDetails(EmpId)
+);
+
+-- Inserting data into EmployeeSalary
+INSERT INTO EmployeeSalary (EmpId, Project, Salary, Variable) VALUES
+(121, 'P1', 8000, 500),
+(321, 'P2', 10000, 1000),
+(421, 'P1', 12000, 0);
+
+-- Adding 30 more rows to EmployeeSalary
+INSERT INTO EmployeeSalary (EmpId, Project, Salary, Variable) VALUES
+(122, 'P2', 8500, 700),
+(123, 'P1', 9500, 800),
+(124, 'P3', 7800, 400),
+(125, 'P1', 9000, 600),
+(126, 'P2', 8200, 300),
+(127, 'P3', 10000, 1200),
+(128, 'P1', 7700, 500),
+(129, 'P2', 8800, 450),
+(130, 'P1', 9800, 700),
+-- Add more rows similarly
+(131, 'P2', 7900, 600),
+(132, 'P3', 8200, 350),
+(133, 'P1', 9000, 550),
+(134, 'P2', 8700, 300),
+(135, 'P1', 7800, 500),
+(136, 'P3', 9200, 400),
+(137, 'P2', 10000, 1500),
+(138, 'P1', 7600, 600),
+(139, 'P3', 8100, 500),
+(140, 'P2', 8600, 400);
+
+INSERT INTO EmployeeDetails (EmpId, FullName, ManagerId, DateOfJoining, City) VALUES
+(777, 'Cena John', 872, '2013-05-31', 'Los Angeles');
+
+select * from EmployeeDetails;
+select * from EmployeeSalary;
