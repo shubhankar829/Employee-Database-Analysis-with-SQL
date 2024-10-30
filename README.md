@@ -1,4 +1,4 @@
-![Assignment 2](https://github.com/user-attachments/assets/c6a7f4b5-85f7-49d3-b562-3d8b52cee4aa)# Employee-Database-Analysis-with-SQL
+# Employee-Database-Analysis-with-SQL
 
 This repository contains a comprehensive set of SQL queries designed to manage and analyze employee data within a fictional company. The queries demonstrate essential SQL skills, from basic data retrieval to advanced operations, and cover common business scenarios for employee management, salary processing, and project assignments.
 
@@ -10,7 +10,7 @@ The project involves two primary tables:
 
 **📊 Schema Diagram**
 
-![Assignment 2](https://github.com/user-attachments/assets/50b388bd-f6af-46a5-9e19-3798722ae2c2)
+![Employee DB Schema](https://github.com/user-attachments/assets/b0d3433a-c5dd-4b82-b135-a08e057c98f7)
 
 **🗄️ Relationships**
 
